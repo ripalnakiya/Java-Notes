@@ -12,11 +12,30 @@ String str = new String("Hello");
 
 Strings are Immutable.
 
-## String Length
+String Class Methods:
 
 ```java
-String str = "Captain jack";
-System.out.println(str.length());           => 12
+int length()
+String toLowerCase()    // Will return a new string, it will not mutate the original string
+String toUpperCase()
+String trim()   // Will remove leading and trailing whitespaces
+String substring(int begin)
+String substring(int begin, int end)
+String replace(old char, new char)  // Will replace all the occurrences of old char with new char
+String concat(String s) // It will concat the string s with the string
+
+boolean startsWith(String s)    // Will check if the string starts with given substring s
+boolean endsWith(String s)
+char charAt(int index)
+boolean contains(String s) // Will check if the substring s is present in the string or not
+
+int indexOf(String s)   // Will return the index of first occurance given substring s inside the string
+int lastIndexOf(String s)
+
+boolean equals(String s)
+boolean equalsIgnoreCase(String s)
+
+int CompareTo(String s)     // Lexicographic comparison
 ```
 
 ## String Concatenation
@@ -51,7 +70,7 @@ int x = 10, y = 20;
 System.out.println("Sum is " + (x + y));          => Sum is 30
 ```
 
-## String Characters
+## Accessing String Characters
 
 ```java
 String str = "Captain jack";
@@ -59,7 +78,7 @@ String str = "Captain jack";
 System.out.println(str.charAt(1));              => a
 ```
 
-We can also access each character using this method.
+We can access each character using this method.
 
 ## String Comparison
 
@@ -81,18 +100,6 @@ It is also called **Interning**.
 
 But, using `equals()` function, the actual value of the string was compared, instead of its pointer.
 
-## String Substring
-
-```java
-String str = "Captain jack";
-
-System.out.println(str.substring(0,3));              => Cap
-```
-
-It will include characters from (start index) upto (end index - 1).
-
-> 0 1 2 (not 3)
-
 ## String Lexicographic Comparison
 
 ```java
@@ -102,6 +109,11 @@ str1.compareTo(str2);
 If value is 0, means strings are equal.
 If value is less than 0, means str1 is less than str2
 If value is greater than 0, means str1 is greater than str2
+
+For example,
+
+- `Java` is greater than `Cpp`, because (74 > 67) i.e. (J > C)
+- `ABC` is smaller than `abc`, because (65 < 97) i.e. (A < a)
 
 ## String Builder
 
