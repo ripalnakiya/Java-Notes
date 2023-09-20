@@ -16,7 +16,7 @@ int numbers[] = {10, 20 ,30};
 String fruits[] = {"Banana", "Mango", "Apple"};
 ```
 
-We can also access the array length using .(dot) operator:
+## Array Length
 
 ```java
 System.out.println(marks.length);           => 50

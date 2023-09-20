@@ -1,47 +1,5 @@
 # Basics
 
-### Check If Java is already installed
-
-```sh
-java --version
-javac --version
-```
-
-_java_ is runtime.
-_javac_ is compiler.
-
-## Java Program
-
-The _program file_ name and _class_ name should be **same**.
-
-For example, the following program is written in `JavaBasics.java` files
-
-```java
-public class JavaBasics
-{
-    public static void main(String[] args)
-    {
-        System.out.print("Hello World!");       // Prints in the same Line
-        System.out.println("Hello World!");     // Prints and then Moves printing pointer to the Next Line
-        System.out.print("Hello World!\n");     // It also Prints and then Moves the printing pointer to the Next Line
-    }
-}
-```
-
-## Running Java program
-
-Firstly, we need to compile the Java program.
-
-```sh
-javac <file-name>.java
-```
-
-Then, we'll run the Java program.
-
-```sh
-java <file-name>.java
-```
-
 ## Data Types
 
 Primitive Types:
@@ -51,11 +9,13 @@ boolean var = true;         // 1 bit
 
 char ch = 'a';              // 2 bytes
 
+// Integral types
 byte b = 100;               // 1 byte
 short num = 25;             // 2 bytes
 int num = 25;               // 4 bytes
 long num = 25;              // 8 bytes
 
+// Floating Point types
 float fl = 10.5f;            // 4 bytes
 double dl = 12.5;           // 8 bytes
 ```
@@ -68,45 +28,28 @@ Class
 Object
 Interface
 
-## Input in Java
+## Identifer Rules
 
-To Take input we need a object of Scanner class.
+Names can contain letters, digits, underscores, and dollar signs.
 
-And to use Scanner class, we need to import it.
+Names must begin with a letter, underscore or dollar sign.
 
-```java
-import java.util.Scanner;
-```
+Names should start with a lowercase letter (Camel Case).
 
-Class have many methods, for inputing different data types.
+Reserved words (like Java keywords, such as int or boolean) cannot be used as names
 
-```java
-Scanner sc = new Scanner(System.in);
-String fName = sc.next();               // Word (Words after a space are not included)
-System.out.println("Hello " + fName) ;
-sc.close();
-```
+## Literals
+
+To improve the readability of program, we can use underscores in the literals.
 
 ```java
-String name = sc.nextLine();            // Multiples Words
-System.out.println("Hello " + name);
+int num = 12_50_287;
+System.out.println(num);                    => 1230287
 ```
 
-`nextBoolean()` Reads a boolean value from the user
+## Operators
 
-`nextByte()` Reads a byte value from the user
-
-`nextShort()` Reads a short value from the user
-
-`nextInt()` Reads a int value from the user
-
-`nextLong()` Reads a long value from the user
-
-`nextDouble()` Reads a double value from the user
-
-`nextFloat()` Reads a float value from the user
-
-`nextLine()` Reads a String value from the user
+In Java, we can use % operator, even on floating point numbers.
 
 ## Summery
 
@@ -132,18 +75,6 @@ public class SumTwo
 }
 
 ```
-
-## Identifer Rules
-
-Names can contain letters, digits, underscores, and dollar signs
-
-Names must begin with a letter
-
-Names should start with a lowercase letter and it cannot contain whitespace
-
-Names can also begin with $ and \_
-
-Reserved words (like Java keywords, such as int or boolean) cannot be used as names
 
 ## Type Conversion
 
