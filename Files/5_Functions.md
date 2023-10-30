@@ -1,21 +1,17 @@
 # Functions
 
 ```java
-public class FunctionPower
-{
+public class FunctionPower {
 
-    public static int power(int num, int pow)
-    {
+    public static int power(int num, int pow) {
         int result = 1;
-        for(int i = 0; i < pow ; i++)
-        {
+        for(int i = 0; i < pow ; i++) {
             result = result * num;
         }
         return result;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         System.out.println(power(2,3));
     }
 }
@@ -36,16 +32,13 @@ But actually the reference of the object in Actual Parameters is copied to Forma
 So, changes made to the reference in another function are reflected in the main() as well.
 
 ```java
-public class FunctionPower
-{
+public class FunctionPower {
 
-    public static int change(int Arr[])
-    {
+    public static int change(int Arr[]) {
         Arr[0] = 20;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         int A[] = {2, 4, 6, 8, 10};
         change(A);
         System.out.println(A[0]);           => 20
@@ -63,10 +56,8 @@ So, `Arr` will also point to the same Array object to which `A` is pointing.
 we use `...` for defining variable number of arguments.
 
 ```java
-static void show(int ...A)
-{
-    for(int x : A)
-    {
+static void show(int ...A) {
+    for(int x : A) {
         System.out.println(x);
     }
 }
@@ -75,32 +66,26 @@ static void show(int ...A)
 In the argument list, `A` functions similar to an array.
 
 ```java
-static void show(int ...A)
-{
-    for(int i=0; i<A.length; i++)
-    {
+static void show(int ...A) {
+    for(int i=0; i<A.length; i++) {
         System.out.print(A[i] + " ");
     }
 }
 
-public static void main(String[] args)
-{
+public static void main(String[] args) {
     show(1,2,3,4,5);                    => 1 2 3 4 5
 }
 ```
 
 ```java
-static void showList(int a, String ...S)
-{
+static void showList(int a, String ...S) {
     System.out.println(a);
-    for(int i = 0; i < S.length; i++)
-    {
+    for(int i = 0; i < S.length; i++) {
         System.out.println(S[i]);
     }
 }
 
-public static void main(String[] args)
-{
+public static void main(String[] args) {
     showList(12, "Jack", "Harry", "Viking", "Thomas");
 }
 ```
@@ -114,18 +99,14 @@ This parameter is used for command line arguments.
 For example, let us write a java program to print all the names passed as command line arguments.
 
 ```java
-public class CommandLineArgs
-{
-    public static void main(String[] args)
-    {
-        for(String s : args)
-        {
+public class CommandLineArgs {
+    public static void main(String[] args) {
+        for(String s : args) {
             System.out.println(s);
         }
 
         // This is also valid
-        for(int i = 0; i < args.length; i++)
-        {
+        for(int i = 0; i < args.length; i++) {
             System.out.println(args[i]);
         }
     }

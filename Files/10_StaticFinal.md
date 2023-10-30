@@ -29,8 +29,7 @@ It is used to initialise static data member.
 It is executed before the main method at the time of class loading.
 
 ```java
-public class Driver
-{
+public class Main {
     static
     {
         System.out.println("Block 1");
@@ -69,10 +68,8 @@ class Test
     }
 }
 
-public class Driver
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
         System.out.println("Main");
     }
 }
@@ -162,15 +159,13 @@ Constructors are made private and object of the singleton class is created in st
 In singleton class getInstance() method is used.
 
 ```java
-class CoffeeMachine
-{
+class CoffeeMachine {
     private float coffeeQ;
     private float waterQ;
 
     static private CoffeeMachine machine = null;
 
-    static CoffeeMachine getInstance()
-    {
+    static CoffeeMachine getInstance() {
         // This insures that object is created only once.
         if (machine == null)
             machine = new CoffeeMachine();
@@ -178,10 +173,8 @@ class CoffeeMachine
     }
 }
 
-class Driver
-{
-    public static void main(String[] args)
-    {
+class Main{
+    public static void main(String[] args){
         CoffeeMachine m1 = CoffeeMachine.getInstance();
         CoffeeMachine m2 = CoffeeMachine.getInstance();
         CoffeeMachine m3 = CoffeeMachine.getInstance();

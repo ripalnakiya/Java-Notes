@@ -3,31 +3,26 @@
 Consider this file name `MyRectangle.java` :
 
 ```java
-class Rectangle
-{
+class Rectangle {
     private int length;
     private int breadth;
 
-    public Rectangle()
-    {
+    public Rectangle() {
         length = 1;
         breadth = 1;
     }
 
-    public Rectangle(int l, int b)
-    {
+    public Rectangle(int l, int b) {
         length = l;
         breadth = b;
     }
 
-    public int area()
-    {
+    public int area() {
         return length * breadth;
     }
 }
 
-public class MyRectangle
-{
+public class MyRectangle {
     public static void main(String[] args) {
         Rectangle r1 = new Rectangle(5,10);
         System.out.println(r1.area());          => 50
@@ -43,10 +38,10 @@ class Test {
 }
 
 class Main {
-  public static void main(String[] args) {
-    Test obj = new Test();
-    System.out.println(obj);                        => Test@512ddf17
-  }
+    public static void main(String[] args) {
+        Test obj = new Test();
+        System.out.println(obj);                        => Test@512ddf17
+    }
 }
 ```
 
@@ -56,43 +51,38 @@ If we want to format the output in our own way, we need to override the toString
 
 ```java
 class Test {
-  public String toString() {
-    return "object";
-  }
+    public String toString() {
+        return "object";
+    }
 }
 
 class Main {
-  public static void main(String[] args) {
-    Test obj = new Test();
-    System.out.println(obj);                        => object
-  }
+    public static void main(String[] args) {
+        Test obj = new Test();
+        System.out.println(obj);                        => object
+    }
 }
 ```
 
 ## Array of Objects
 
 ```java
-class Subject
-{
+class Subject {
     private String name;
     private int maxMarks;
 
-    public Subject(String name, int maxMarks)
-    {
+    public Subject(String name, int maxMarks) {
         this.name = name;
         this.maxMarks = maxMarks;
     }
 
-    public String toString()
-    {
+    public String toString() {
         return "\nName: "+ name + "\nMax Marks: "+ maxMarks;
     }
 }
 
-public class ArrayOfObjects
-{
-    public static void main(String[] args)
-    {
+public class ArrayOfObjects {
+    public static void main(String[] args) {
         // This only creates 3 references for the objects, It doesn't create the objects
         Subject subs[] = new Subject[3];
 
@@ -101,8 +91,7 @@ public class ArrayOfObjects
         subs[1] = new Subject("Java", 100);
         subs[2] = new Subject(".NET", 50);
 
-        for(Subject sub : subs)
-        {
+        for(Subject sub : subs) {
             System.out.println(sub);
         }
     }
@@ -156,7 +145,7 @@ class Student {
     }
 }
 
-public class Driver {
+public class Main {
     public static void main(String[] args) {
 
         // Creating Array of Student Objects

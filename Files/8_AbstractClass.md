@@ -1,4 +1,4 @@
-# Abstract Class
+# Abstract Classes
 
 There are two types of classes Abstract class and Concrete class.
 
@@ -36,10 +36,8 @@ class Derived extends Base
     }
 }
 
-public class Driver
-{
-    public static void main(String[] args)
-    {
+public class Main{
+    public static void main(String[] args) {
         Base b;                         // Reference of abstract class is allowed
         Derived d = new Derived();
     }

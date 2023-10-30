@@ -7,8 +7,7 @@ Inheritances are used for borrowing methods.
 Consider this abstract class:
 
 ```java
-abstract class Base
-{
+abstract class Base {
     abstract public void method1();
     abstract public void method2();
 }
@@ -36,8 +35,7 @@ Interface can be call as Abstract Class with all abstract methods
 Above class can be written using Interfaces in the same way:
 
 ```java
-interface Base
-{
+interface Base {
     void method1();
     void method2();
 }
@@ -69,26 +67,22 @@ In Interfaces also, we can create reference of interface and assign the object o
 We can also define our own extra methods in derived class.
 
 ```java
-class Phone
-{
+class Phone {
     public void call(){System.out.println("Phone call");}
     public void SMS(){System.out.println("Phone SMS");}
 }
 
-interface Icamera
-{
+interface Icamera {
     void click();
     void record();
 }
 
-interface IMusicPlayer
-{
+interface IMusicPlayer {
     void play();
     void pause();
 }
 
-class Smartphone extends Phone implements ICamera, IMusicPlayer
-{
+class Smartphone extends Phone implements ICamera, IMusicPlayer {
     public void click(){System.out.println("Camera Click");}
     public void record(){System.out.println("Camera Record");}
 
@@ -98,10 +92,8 @@ class Smartphone extends Phone implements ICamera, IMusicPlayer
     public void videoCall(){System.out.println("Smartphone Video Call");}
 }
 
-public class Driver
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
         Smartphone s = new Smartphone();
         s.call();
         s.SMS();
@@ -131,13 +123,11 @@ public class Driver
 Interfaces are used for defining callback methods.
 
 ```java
-interface Member
-{
+interface Member {
     public void callback();
 }
 
-class Store
-{
+class Store {
     // Creating array of references of Member
     Member members = new Member[100];
     int counter = 0;
@@ -152,8 +142,7 @@ class Store
     }
 }
 
-class Customer implements Member
-{
+class Customer implements Member {
     String name;
 
     Customer(String name){
@@ -165,9 +154,8 @@ class Customer implements Member
     }
 }
 
-public class Driver
-{
-    public static void main(String[] args){
+public class Main {
+    public static void main(String[] args) {
         Store s = new Store();
         Customer c1 = new Customer("Jack");
         Customer c2 = new Customer("John");

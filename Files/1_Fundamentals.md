@@ -133,7 +133,7 @@ But There will be an error when executing the program.
 ## Java Program
 
 ```java
-public class JavaBasics
+public class Main
 {
     public static void main(String[] args)
     {

@@ -1,12 +1,10 @@
 # Inheritance
 
 ```java
-class Circle
-{
+class Circle {
     private double radius;
 
-    public Circle(double radius)
-    {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
@@ -14,10 +12,8 @@ class Circle
     public double area() {return Math.PI*radius * radius;}
 }
 
-class Cylinder extends Circle
-{
+class Cylinder extends Circle {
     private double height;
-
     public volume(){return area() * height;}
 }
 ```
@@ -33,14 +29,12 @@ Object of Cylinder class will have size of 16 bytes.
 Parameterised constructor of base class must be explicitly called from derived class constructor.
 
 ```java
-class Base
-{
+class Base {
     public Base(){System.out.println("Non Param of Base ");}
     public Base(int x){System.out.println("Param of Base " + x);}
 }
 
-class Derived extends Base
-{
+class Derived extends Base {
     public Derived(){System.out.println("Non Param of Derived ");}
     public Derived(int y){System.out.println("Param of Derived " + y);}
 
@@ -60,17 +54,14 @@ Here, `super()` is used to call a superclass parameterised constructor.
 It can also be used to access data members of super class from derived class.
 
 ```java
-class Base
-{
+class Base {
     int x = 10;
 }
 
-class Derived extends Base
-{
+class Derived extends Base {
     int x = 20;
 
-    void printValues()
-    {
+    void printValues() {
         System.out.println(super.x);            => 10
         System.out.println(x);                  => 20
     }
@@ -89,26 +80,20 @@ When we redefine a Base class Method inside Derived class, it is called method o
 Method Overriding, shadows the Base class method.
 
 ```java
-class Base
-{
-    public void display()
-    {
-    System.out.println("Base Class Display");
+class Base {
+    public void display() {
+        System.out.println("Base Class Display");
     }
 }
 
-class Derived extends Base
-{
-    public void display()
-    {
-     System.out.println("Derived Class Display");
+class Derived extends Base {
+    public void display() {
+        System.out.println("Derived Class Display");
     }
 }
 
-class Driver
-{
-    public static void main(String[] args)
-    {
+class Main {
+    public static void main(String[] args) {
         Base b = new Base();
         b.display();                    => Base Class Display
 
@@ -123,19 +108,15 @@ class Driver
 Invalid Ways of Overriding Methods :
 
 ```java
-class Base
-{
-    public void Display()
-    {
-    System.out.println("Base Class Display");
+class Base {
+    public void Display() {
+        System.out.println("Base Class Display");
     }
 }
 
-class Derived extends Base
-{
-    public void Display(int x)
-    {
-     System.out.println("Derived Class Display");
+class Derived extends Base {
+    public void Display(int x) {
+        System.out.println("Derived Class Display");
     }
 }
 ```
@@ -143,19 +124,15 @@ class Derived extends Base
 Here, `Display()` is not **overrided**, But they are **overloaded**.
 
 ```java
-class Base
-{
-    public void Display()
-    {
-    System.out.println("Base Class Display");
+class Base {
+    public void Display() {
+        System.out.println("Base Class Display");
     }
 }
 
-class Derived extends Base
-{
-    public int Display(int x)
-    {
-     System.out.println("Derived Class Display");
+class Derived extends Base {
+    public int Display(int x) {
+        System.out.println("Derived Class Display");
     }
 }
 ```
@@ -165,26 +142,20 @@ This will generate error, since the return types are different.
 ## Dynamic Method Dispatch
 
 ```java
-class Base
-{
-    public void display()
-    {
-    System.out.println("Base Class Display");
+class Base {
+    public void display() {
+        System.out.println("Base Class Display");
     }
 }
 
-class Derived extends Base
-{
-    public void display()
-    {
-     System.out.println("Derived Class Display");
+class Derived extends Base {
+    public void display() {
+        System.out.println("Derived Class Display");
     }
 }
 
-class Driver
-{
-    public static void main(String[] args)
-    {
+class Main {
+    public static void main(String[] args) {
         Base b = new Derive();
         b.display();                            => Derived Class Display
     }
@@ -202,34 +173,30 @@ The derived class method will be called.
 ---
 
 ```java
-class Base
-{
+class Base {
     public void meth1()
     {
-    System.out.println("Base Method 1 Display");
+        System.out.println("Base Method 1 Display");
     }
     public void meth2()
     {
-    System.out.println("Base Method 2 Display");
+    S   ystem.out.println("Base Method 2 Display");
     }
 }
 
-class Derived extends Base
-{
+class Derived extends Base {
     public void meth2()
     {
-     System.out.println("Derived Method 2 Display");
+        System.out.println("Derived Method 2 Display");
     }
     public void meth3()
     {
-    System.out.println("Derived Method 3 Display");
+        System.out.println("Derived Method 3 Display");
     }
 }
 
-class Driver
-{
-    public static void main(String[] args)
-    {
+class Main {
+    public static void main(String[] args) {
         // Case 1
         Base b = new Base();
         b.meth1();                          => Base Method 1 Display

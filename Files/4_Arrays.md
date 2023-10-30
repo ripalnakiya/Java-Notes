@@ -40,8 +40,7 @@ We can also use **For each** loop to access the elements of the array
 ```java
 int A[] = {2, 4, 6, 8, 10};
 
-for(int x : A)
-{
+for(int x : A) {
     System.out.println(x);
 }
 ```
@@ -93,10 +92,8 @@ Here, A is 1D array and B is 2D array.
 ### Accessing Array Elements
 
 ```java
-for(int x[] : A)
-{
-    for(int y : x)
-    {
+for(int x[] : A) {
+    for(int y : x) {
         System.out.print(y);
     }
     System.out.print("\n");

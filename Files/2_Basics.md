@@ -58,7 +58,7 @@ Sum of two number
 ```java
 import java.util.Scanner;
 
-public class SumTwo
+public class Main
 {
     public static void main(String[] args)
     {
