@@ -2,7 +2,7 @@
 
 ### Check If Java is already installed
 
-```SH
+```shell
 java --version
 javac --version
 ```
@@ -34,7 +34,7 @@ and No new file is generated, since Interpreter is used.
 
 Firstly, we need to compile the Java program.
 
-```SH
+```shell
 javac First.java
 ```
 
@@ -42,7 +42,7 @@ A `.class` file is generated after this. (First.class)
 
 Then, we'll run the Java program.
 
-```SH
+```shell
 java First
 ```
 
@@ -68,7 +68,7 @@ class First
 
 Now run this program,
 
-```SH
+```shell
 javac First.java
 
 java First
@@ -90,7 +90,7 @@ class Second
 
 Now run this program,
 
-```SH
+```shell
 javac First.java
 
 java Second
@@ -116,7 +116,7 @@ public class Second
 
 Now run this program,
 
-```SH
+```shell
 javac First.java
 ```
 

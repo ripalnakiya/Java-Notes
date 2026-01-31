@@ -115,11 +115,11 @@ public class CommandLineArgs {
 
 Now, To pass the command line arguments:
 
-```SH
+```shell
 > javac CommandLineArgs.java
 ```
 
-```SH
+```shell
 > java CommandLineArgs Harry Jack Thomas
 Harry
 Jack

@@ -235,7 +235,7 @@ public class Main {
 
 Output:
 
-```SH
+```shell
 Thread Id: 15
 Thread name: Thread 1
 Thread Priority: 1

@@ -47,7 +47,7 @@ public class Main {
 
 Output:
 
-```SH
+```shell
 Block 1
 Block 2
 Main
@@ -77,7 +77,7 @@ public class Main {
 
 Output:
 
-```SH
+```shell
 Main
 ```
 
@@ -189,7 +189,7 @@ class Main{
 
 Output:
 
-```SH
+```shell
 Same
 ```
 

@@ -121,7 +121,7 @@ public class Main {
 
 Output:
 
-```SH
+```shell
 Cannot divide by zero
 ```
 
@@ -222,7 +222,7 @@ public class Mai {
 
 Output:
 
-```SH
+```shell
 Finally block
 ```
 
