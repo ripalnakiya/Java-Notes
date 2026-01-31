@@ -16,7 +16,7 @@ Java provides `Thread` class and `runnable` interface to achieve multithreading.
 
 ## Thread Class
 
-```java
+```Java
 class MyThread extends Thread{
     @Override
     public void run(){
@@ -42,7 +42,7 @@ public class Main{
 }
 ```
 
-```java
+```Java
 public class Main extends Thread{
     @Override
     public void run(){
@@ -70,7 +70,7 @@ public class Main extends Thread{
 
 ## Runnable Interface
 
-```java
+```Java
 class MyRunnable implements Runnable{
     @Override
     public void run(){
@@ -98,7 +98,7 @@ public class Main{
 }
 ```
 
-```java
+```Java
 public class Main implements Runnable{
     @Override
     public void run(){
@@ -153,7 +153,7 @@ Multithreading features are provided by the operating systems but in java, JVM h
 
 ## Methods of Thread Class
 
-```java
+```Java
 // Constructors
 Thread()
 Thread(Runnable r)
@@ -193,7 +193,7 @@ void yield();               // It can stop higher priority thread from starvatin
 void dumpstack();           // to know the contents in the stack or to know the depth of the stack.
 ```
 
-```java
+```Java
 class MyThread extends Thread {
     public MyThread(String name) {
         // calling super class constructor i.e. Thread(String name)
@@ -235,7 +235,7 @@ public class Main {
 
 Output:
 
-```sh
+```SH
 Thread Id: 15
 Thread name: Thread 1
 Thread Priority: 1
@@ -252,7 +252,7 @@ java.lang.InterruptedException: sleep interrupted
 
 ## Synchronization
 
-```java
+```Java
 class MyData {
     // We can synchronize a block or a complete function
     public void display(String str) {
@@ -313,7 +313,7 @@ The classes Mythread1 and Mythread2 access the data from the display class which
 
 Example using ATM Machine:
 
-```java
+```Java
 public class ATM {
     synchronized public void checkBalance(String name) {
         System.out.print(name);

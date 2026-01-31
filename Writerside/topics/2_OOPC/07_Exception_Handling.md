@@ -19,7 +19,7 @@ There are many types of errors:
 Syntax and Logical errors are faced by Programmers, and runtime
 errors are faced by user
 
-```java
+```Java
 public class Main {
    public static void main(String[] args) {
       int a = 10;
@@ -44,7 +44,7 @@ Object is the mother class for all the java classes.
 
 Exception is the parent class for all the exceptions.
 
-```java
+```Java
 Exception
    ClassNotFoundException
    IOException
@@ -56,7 +56,7 @@ Exception
       NullPointerException
 ```
 
-```java
+```Java
 // Exception Class Methods
 String getMessage();          // System.out.println(e.getMessage());
 String toString();            // System.out.println(e);
@@ -75,7 +75,7 @@ Exception classes are categorised into two types:
 
 ## Custom Exception Classes
 
-```java
+```Java
 class NegativeDimensionException extends Exception {
    public String toString() {
       return "Dimensions cannot be negative";
@@ -83,7 +83,7 @@ class NegativeDimensionException extends Exception {
 }
 ```
 
-```java
+```Java
 public int area(int a, int b) throws NegativeDimensionException
 {
    if(a<0 || b<0) {
@@ -95,7 +95,7 @@ public int area(int a, int b) throws NegativeDimensionException
 
 ## Propagation of Exception
 
-```java
+```Java
 public class Main {
    static int method1() {
       return 10/0;
@@ -121,7 +121,7 @@ public class Main {
 
 Output:
 
-```sh
+```SH
 Cannot divide by zero
 ```
 
@@ -135,7 +135,7 @@ Only one exception can be thrown at a time by using `throw` keyword.
 
 We can catch the exception in the same function using `try` and `catch` block.
 
-```java
+```Java
 public class Main {
    public static void main(String[] args) {
       int a = 10, b = 0;
@@ -160,7 +160,7 @@ public class Main {
 
 `throws` is used for declaring that a method may throw exception.
 
-```java
+```Java
 class NegativeDimensionException extends Exception {
    public String toString() {
       return "Dimensions cannot be negative";
@@ -204,7 +204,7 @@ Resources are needed to be closed in `finally` block.
 
 It is useful when we're not handling all the exceptions in the program.
 
-```java
+```Java
 public class Mai {
    public static void main(String[] args) {
       try
@@ -222,7 +222,7 @@ public class Mai {
 
 Output:
 
-```sh
+```SH
 Finally block
 ```
 
@@ -234,7 +234,7 @@ Garbage Collector only releases the heap memory(Heap memory is resource).
 
 Programmer is responsible for releasing the other resources(Network, Database, Files).
 
-```java
+```Java
 int method1() throws Exception {
    FileReader f;
 
@@ -260,7 +260,7 @@ This is a proper code, for handling with resources.
 
 To avoid `finally` block(to close the acquired resources), we use `try` with resources.
 
-```java
+```Java
 int method1() throws Exception {
 
    try(FileReader f = new FileReader("abc.txt")) {

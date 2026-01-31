@@ -6,7 +6,7 @@ Inheritances are used for borrowing methods.
 
 Consider this abstract class:
 
-```java
+```Java
 abstract class Base {
     abstract public void method1();
     abstract public void method2();
@@ -34,7 +34,7 @@ Interface can be call as Abstract Class with all abstract methods
 
 Above class can be written using Interfaces in the same way:
 
-```java
+```Java
 interface Base {
     void method1();
     void method2();
@@ -66,7 +66,7 @@ In Interfaces also, we can create reference of interface and assign the object o
 
 We can also define our own extra methods in derived class.
 
-```java
+```Java
 class Phone {
     public void call(){System.out.println("Phone call");}
     public void SMS(){System.out.println("Phone SMS");}
@@ -122,7 +122,7 @@ public class Main {
 
 Interfaces are used for defining callback methods.
 
-```java
+```Java
 interface Member {
     public void callback();
 }

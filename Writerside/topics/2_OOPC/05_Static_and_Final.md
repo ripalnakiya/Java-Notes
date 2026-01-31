@@ -28,7 +28,7 @@ It is used to initialise static data member.
 
 It is executed before the main method at the time of class loading.
 
-```java
+```Java
 public class Main {
     static
     {
@@ -47,7 +47,7 @@ public class Main {
 
 Output:
 
-```sh
+```SH
 Block 1
 Block 2
 Main
@@ -55,7 +55,7 @@ Main
 
 ---
 
-```java
+```Java
 class Test
 {
     static
@@ -77,7 +77,7 @@ public class Main {
 
 Output:
 
-```sh
+```SH
 Main
 ```
 
@@ -99,7 +99,7 @@ Value of `final` variables are fixed,that is once the value is assigned then it 
 - Inside the constructor of class.
   - As constructors can be overloaded, so the final variable must be initialised in every constructor.
 
-```java
+```Java
 class Test
 {
     final int LOW = 0;
@@ -158,7 +158,7 @@ Constructors are made private and object of the singleton class is created in st
 
 In singleton class getInstance() method is used.
 
-```java
+```Java
 class CoffeeMachine {
     private float coffeeQ;
     private float waterQ;
@@ -189,7 +189,7 @@ class Main{
 
 Output:
 
-```sh
+```SH
 Same
 ```
 

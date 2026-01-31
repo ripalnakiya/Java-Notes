@@ -31,7 +31,7 @@ Protected : (They are not accessible only in non-subclass of another package)
 
 A Class can have three type of members : variables, methods and inner classes.
 
-```java
+```Java
 class Outer
 {
     int x;
@@ -58,14 +58,14 @@ Class Can be used in two ways:
 
 Either by creating its object, or by Inheriting it.
 
-```java
+```Java
 class Test
 {
     // Implementation
 }
 ```
 
-```java
+```Java
 // HAS-A relationship
 // This class HAS-A object of Test
 class Demo1
@@ -74,7 +74,7 @@ class Demo1
 }
 ```
 
-```java
+```Java
 // IS-A relationship
 // This class IS-A Test class
 class Demo2 extends Test

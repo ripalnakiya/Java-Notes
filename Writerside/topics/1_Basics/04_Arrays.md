@@ -2,13 +2,13 @@
 
 Array Declaration Syntax:
 
-```java
+```Java
 dataType arrayName[] = new dataType[size];
 ```
 
 For example,
 
-```java
+```Java
 int marks[] = new marks[10];
 
 int []marks = new int[10];
@@ -29,7 +29,7 @@ String fruits[] = {"Banana", "Mango", "Apple"};
 
 ## Array Length
 
-```java
+```Java
 System.out.println(marks.length);           => 50
 ```
 
@@ -37,7 +37,7 @@ System.out.println(marks.length);           => 50
 
 We can also use **For each** loop to access the elements of the array
 
-```java
+```Java
 int A[] = {2, 4, 6, 8, 10};
 
 for(int x : A) {
@@ -51,7 +51,7 @@ For each loop will only access the array elements, it will not modify the acutal
 
 ## 2D Array
 
-```java
+```Java
 int A[][] = new int[3][4];
 
 int [][]A = new int[3][4];
@@ -80,7 +80,7 @@ int A[][] = {{1,2,3,4}, {2,4,6,8}, {3,6,9,12}};
 
 Consider this tricky array declaration:
 
-```java
+```Java
 int[] A, B[];
 
 A = new int[10];
@@ -91,7 +91,7 @@ Here, A is 1D array and B is 2D array.
 
 ### Accessing Array Elements
 
-```java
+```Java
 for(int x[] : A) {
     for(int y : x) {
         System.out.print(y);

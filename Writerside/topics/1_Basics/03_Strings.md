@@ -4,7 +4,7 @@ String is collection of characters.
 
 String syntax:
 
-```java
+```Java
 String str = "Hello";
 // or
 String str = new String("Hello");
@@ -14,7 +14,7 @@ Strings are Immutable.
 
 String Class Methods:
 
-```java
+```Java
 int length()
 String toLowerCase()    // Will return a new string, it will not mutate the original string
 String toUpperCase()
@@ -40,7 +40,7 @@ int CompareTo(String s)     // Lexicographic comparison
 
 ## String Concatenation
 
-```java
+```Java
 String fName = "Captain";
 String lName = "Jack";
 
@@ -49,12 +49,12 @@ String name = fName + " " + lName;
 
 When using concatenation operator with strings , we should be careful.
 
-```java
+```Java
 int x = 10, y = 20;
 System.out.println(x + y + " is Sum");          => 30 is Sum
 ```
 
-```java
+```Java
 int x = 10, y = 20;
 System.out.println("Sum is " + x + y);          => Sum is 1020
 ```
@@ -65,14 +65,14 @@ System.out.println("Sum is " + x + y);          => Sum is 1020
 
 So, we can use bracket to set the precedence.
 
-```java
+```Java
 int x = 10, y = 20;
 System.out.println("Sum is " + (x + y));          => Sum is 30
 ```
 
 ## Accessing String Characters
 
-```java
+```Java
 String str = "Captain jack";
 
 System.out.println(str.charAt(1));              => a
@@ -82,7 +82,7 @@ We can access each character using this method.
 
 ## String Comparison
 
-```java
+```Java
 String s1 = "Jack";
 String s2 = "Jack";
 String s3 = new String("Jack");
@@ -102,7 +102,7 @@ But, using `equals()` function, the actual value of the string was compared, ins
 
 ## String Lexicographic Comparison
 
-```java
+```Java
 str1.compareTo(str2);
 ```
 
@@ -121,7 +121,7 @@ When we modify existing string, a new string is created inside the memory.
 
 For example,
 
-```java
+```Java
 String str = new String("Hello");
 
 str = str + 'A';
@@ -133,7 +133,7 @@ This is because, Strings are immutable in java.
 
 **String Builder** is a mutable
 
-```java
+```Java
 StringBuilder sb = new StringBuilder("Hello");
 ```
 
@@ -141,7 +141,7 @@ StringBuilder sb = new StringBuilder("Hello");
 
 For example,
 
-```java
+```Java
 int a = 10;
 a.toString();               // Incorrect, since a is not object
 
@@ -149,7 +149,7 @@ char ch = 'a';
 ch.toString();              // Incorrect, since ch is not object
 ```
 
-```java
+```Java
 Integer a = 10;
 a.toString();               // Correct
 
@@ -163,7 +163,7 @@ We can add characters in the `StringBuilder` object, by using `append()` method.
 
 It appends character to the end of the string.
 
-```java
+```Java
 StringBuilder sb = new StringBuilder("");
 sb.append("Hello");
 System.out.println(sb);

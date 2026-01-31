@@ -6,7 +6,7 @@ Lambda expressions are defined with the help of interfaces.
 
 If a interface have single abstract method then it is called the functional interface.
 
-```java
+```Java
 @FunctionalInterface
 interface MyLambda {
     public void display();
@@ -28,7 +28,7 @@ public class Main{
 
 ## Parameters and Returning
 
-```java
+```Java
 @FunctionalInterface
 interface MyLambda {
     public void display(String str);
@@ -43,7 +43,7 @@ public class Main{
 }
 ```
 
-```java
+```Java
 @FunctionalInterface
 interface MyLambda {
     public int add(int a, int b);
@@ -65,7 +65,7 @@ public class Main{
 
 ## Variables Capture
 
-```java
+```Java
 @FunctionalInterface
 interface MyLambda {
     public void display();
@@ -111,7 +111,7 @@ Also, those variables can never be modified inside the lamda expression.
 
 ## Lambda Expression as Parameter
 
-```java
+```Java
 @FunctionalInterface
 interface MyLambda {
     public int add(int a, int b);
@@ -145,7 +145,7 @@ public class Main{
 
 We can use method reference to call a method
 
-```java
+```Java
 @FunctionalInterface
 interface MyLambda {
     public void display(String str);
@@ -191,7 +191,7 @@ public class Main{
 
 Method Reference with parameters
 
-```java
+```Java
 @FunctionalInterface
 interface MyLambda {
     public int display(String str1, String str2);

@@ -12,7 +12,7 @@ class can be created.
 
 Reference of abstract class is allowed.
 
-```java
+```Java
 abstract class Base
 {
     Base()

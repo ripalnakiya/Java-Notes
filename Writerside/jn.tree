@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="jn"
+                 name="Java Notes"
+                 start-page="01_Fundamentals.md">
+
+    <toc-element topic="01_Fundamentals.md"/>
+
+    <toc-element toc-title="Basics">
+        <toc-element topic="02_Basics.md"/>
+        <toc-element topic="03_Strings.md"/>
+        <toc-element topic="04_Arrays.md"/>
+        <toc-element topic="05_Functions.md"/>
+    </toc-element>
+
+    <toc-element toc-title="OOPC">
+        <toc-element topic="01_Object_Oriented_Programming.md"/>
+        <toc-element topic="02_Inheritance.md"/>
+        <toc-element topic="03_Abstract_Class.md"/>
+        <toc-element topic="04_Interfaces.md"/>
+        <toc-element topic="05_Static_and_Final.md"/>
+        <toc-element topic="06_Access_Modifiers.md"/>
+        <toc-element topic="07_Exception_Handling.md"/>
+    </toc-element>
+
+    <toc-element  toc-title="Other">
+        <toc-element topic="01_Multithreading.md"/>
+        <toc-element topic="02_Annotations.md"/>
+        <toc-element topic="03_Lamda_Expressions.md"/>
+    </toc-element>
+
+</instance-profile>

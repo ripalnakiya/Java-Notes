@@ -2,7 +2,7 @@
 
 ### Check If Java is already installed
 
-```sh
+```SH
 java --version
 javac --version
 ```
@@ -34,7 +34,7 @@ and No new file is generated, since Interpreter is used.
 
 Firstly, we need to compile the Java program.
 
-```sh
+```SH
 javac First.java
 ```
 
@@ -42,7 +42,7 @@ A `.class` file is generated after this. (First.class)
 
 Then, we'll run the Java program.
 
-```sh
+```SH
 java First
 ```
 
@@ -56,7 +56,7 @@ It is compulsory only when the class is declared public.
 
 Consider this program file name is `First.java`:
 
-```java
+```Java
 class First
 {
     public static void main(String[] args)
@@ -68,7 +68,7 @@ class First
 
 Now run this program,
 
-```sh
+```SH
 javac First.java
 
 java First
@@ -78,7 +78,7 @@ java First
 
 Consider this program file name is `First.java`:
 
-```java
+```Java
 class Second
 {
     public static void main(String[] args)
@@ -90,7 +90,7 @@ class Second
 
 Now run this program,
 
-```sh
+```SH
 javac First.java
 
 java Second
@@ -104,7 +104,7 @@ java Second
 
 Now, Consider this program file name is `First.java`:
 
-```java
+```Java
 public class Second
 {
     public static void main(String[] args)
@@ -116,7 +116,7 @@ public class Second
 
 Now run this program,
 
-```sh
+```SH
 javac First.java
 ```
 
@@ -132,7 +132,7 @@ But There will be an error when executing the program.
 
 ## Java Program
 
-```java
+```Java
 public class Main
 {
     public static void main(String[] args)
@@ -148,7 +148,7 @@ public class Main
 
 Format Specifier:
 
-```java
+```Java
 % [argumentIndex $] [flags] [width] [.precesion] conversion
 ```
 
@@ -162,7 +162,7 @@ Format Specifier:
   - float -> f, e, g
   - string -> s
 
-```java
+```Java
 int x = 5;
 float y = 10.2;
 String z = "Jack";
@@ -170,7 +170,7 @@ String z = "Jack";
 System.out.printf("%d %f %s", x, y, z);         => 5 10.2 Jack
 ```
 
-```java
+```Java
 int x = 5;
 float y = 10.2;
 String z = "Jack";
@@ -179,7 +179,7 @@ String z = "Jack";
 System.out.printf("%3$s %2$f %1$d", x, y, z);       => Jack 10.2 5
 ```
 
-```java
+```Java
 int a = 12;
 
 // Using the Width
@@ -188,7 +188,7 @@ System.out.printf("%5d", a);                => "   12"
 
 The value of a will be printed and will occupy 5 places in the output.
 
-```java
+```Java
 int a = 123456;
 
 // Using the Width
@@ -199,7 +199,7 @@ When value of width is less than the value of digits in number, then the width w
 
 ---
 
-```java
+```Java
 int a = 12;
 
 // Using the Width and Flag 0
@@ -208,7 +208,7 @@ System.out.printf("%05d", a);                => "00012"
 
 The **Flag 0** will fill empty space with 0.
 
-```java
+```Java
 int a = -12;
 
 // Using the Width and Flag (
@@ -218,14 +218,14 @@ System.out.printf("%(5d", a);                => " (12)"
 The **Flag (** will wrap the negative numbers in brackets.
 It will not have any effect on positive numbers.
 
-```java
+```Java
 int a = 12;
 
 // Using the Width and Flag +
 System.out.printf("%+5d", a);                => "  +12"
 ```
 
-```java
+```Java
 int a = -12;
 
 // Using the Width and Flag +
@@ -234,14 +234,14 @@ System.out.printf("%+5d", a);                => "  -12"
 
 The **Flag +** forces to preceed the result with a plus or minus sign (+ or -) even for positive numbers. By default, only negative numbers are preceded with a - sign.
 
-```java
+```Java
 String str = "Jack";
 
 // Using the Width and Flag -
 System.out.printf("%11s",str);                  => "       Jack"
 ```
 
-```java
+```Java
 String str = "Jack";
 
 // Using the Width and Flag -
@@ -252,7 +252,7 @@ The **Flag -** will left-justify within the given field width. Right justificati
 
 ---
 
-```java
+```Java
 int float = 12.432;
 
 // Using the Width
@@ -268,14 +268,14 @@ System.out.printf("%5.2d", a);                  => "12.43"
 System.out.printf("%07.2d", a);                 => "012.43"
 ```
 
-```java
+```Java
 int float = 12345678.543;
 
 // Using the Width and precision
 System.out.printf("%6.2d", a);                => "12345678.00"
 ```
 
-```java
+```Java
 int float = 12.654321;
 
 // Using only Width
@@ -290,20 +290,20 @@ To Take input we need a object of Scanner class.
 
 And to use Scanner class, we need to import it.
 
-```java
+```Java
 import java.util.Scanner;
 ```
 
 Class have many methods, for inputing different data types.
 
-```java
+```Java
 Scanner sc = new Scanner(System.in);
 String fName = sc.next();               // Word (Words after a space are not included)
 System.out.println("Hello " + fName) ;
 sc.close();
 ```
 
-```java
+```Java
 String name = sc.nextLine();            // Multiples Words
 System.out.println("Hello " + name);
 ```

@@ -2,7 +2,7 @@
 
 Consider this file name `MyRectangle.java` :
 
-```java
+```Java
 class Rectangle {
     private int length;
     private int breadth;
@@ -32,7 +32,7 @@ public class MyRectangle {
 
 ## Printing Object of a Class
 
-```java
+```Java
 class Test {
 
 }
@@ -49,7 +49,7 @@ This is because while printing the object, the toString() method of the object c
 
 If we want to format the output in our own way, we need to override the toString() method inside the class.
 
-```java
+```Java
 class Test {
     public String toString() {
         return "object";
@@ -66,7 +66,7 @@ class Main {
 
 ## Array of Objects
 
-```java
+```Java
 class Subject {
     private String name;
     private int maxMarks;
@@ -100,7 +100,7 @@ public class ArrayOfObjects {
 
 ## Class with Other Class Object as Member
 
-```java
+```Java
 class Subject {
     private String name;
     private int maxMarks;

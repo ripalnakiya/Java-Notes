@@ -1,6 +1,6 @@
 # Inheritance
 
-```java
+```Java
 class Circle {
     private double radius;
 
@@ -28,7 +28,7 @@ Object of Cylinder class will have size of 16 bytes.
 
 Parameterised constructor of base class must be explicitly called from derived class constructor.
 
-```java
+```Java
 class Base {
     public Base(){System.out.println("Non Param of Base ");}
     public Base(int x){System.out.println("Param of Base " + x);}
@@ -53,7 +53,7 @@ Here, `super()` is used to call a superclass parameterised constructor.
 
 It can also be used to access data members of super class from derived class.
 
-```java
+```Java
 class Base {
     int x = 10;
 }
@@ -79,7 +79,7 @@ When we redefine a Base class Method inside Derived class, it is called method o
 
 Method Overriding, shadows the Base class method.
 
-```java
+```Java
 class Base {
     public void display() {
         System.out.println("Base Class Display");
@@ -107,7 +107,7 @@ class Main {
 
 Invalid Ways of Overriding Methods :
 
-```java
+```Java
 class Base {
     public void Display() {
         System.out.println("Base Class Display");
@@ -123,7 +123,7 @@ class Derived extends Base {
 
 Here, `Display()` is not **overrided**, But they are **overloaded**.
 
-```java
+```Java
 class Base {
     public void Display() {
         System.out.println("Base Class Display");
@@ -141,7 +141,7 @@ This will generate error, since the return types are different.
 
 ## Dynamic Method Dispatch
 
-```java
+```Java
 class Base {
     public void display() {
         System.out.println("Base Class Display");
@@ -172,7 +172,7 @@ The derived class method will be called.
 
 ---
 
-```java
+```Java
 class Base {
     public void meth1()
     {

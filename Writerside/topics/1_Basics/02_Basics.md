@@ -4,7 +4,7 @@
 
 Primitive Types:
 
-```java
+```Java
 boolean var = true;         // 1 bit
 
 char ch = 'a';              // 2 bytes
@@ -42,7 +42,7 @@ Reserved words (like Java keywords, such as int or boolean) cannot be used as na
 
 To improve the readability of program, we can use underscores in the literals.
 
-```java
+```Java
 int num = 12_50_287;
 System.out.println(num);                    => 1230287
 ```
@@ -55,7 +55,7 @@ In Java, we can use % operator, even on floating point numbers.
 
 Sum of two number
 
-```java
+```Java
 import java.util.Scanner;
 
 public class Main
@@ -92,12 +92,12 @@ It happens when :
 
 It is also called widening conversion or Implicit conversion.
 
-```java
+```Java
 int num = 10;
 float price = num;      // valid
 ```
 
-```java
+```Java
 float price = 10.0f;
 int num = price;        // Invalid
 ```
@@ -106,7 +106,7 @@ int num = price;        // Invalid
 
 If we want to assign a value of a larger data type to a smaller data type we perform explicit type casting or narrowing.
 
-```java
+```Java
 float price = 10.0f;
 int num = (int) price;      // Valid
 ```
@@ -121,19 +121,19 @@ While evaluating expressions, the intermediate value may exceed the range of ope
 
 - If one operand is `long`, `float` or `double` the whole expression is promoted to long, float, or double respectively.
 
-```java
+```Java
 byte b = 5;
 b = b * 2;      // Invalid
 ```
 
 This is invalid because `b * 2` is an expression, so its value will be promoted to `int` type, and cannot be assigned to byte type directly.
 
-```java
+```Java
 byte b = 5;
 b = (byte)(b * 2);      // Valid
 ```
 
-## Operators
+## Types of Operators
 
 There are different types of operators :
 
