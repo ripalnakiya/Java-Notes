@@ -17,39 +17,53 @@ public class FunctionPower {
 }
 ```
 
-In Java, we can only pass the arguments by value.
+In Java, we can only pass the arguments **by value**, always.
 
-That is, pass by reference and pass by address is not allowed.
+That is, we can't use **pass by reference** and **pass by address**.
 
 Content of Actual Parameters is **Copied** to Formal Parameters.
 
-## Passing Objects as Parameter
+## Passing Objects as Parameters
 
-When passing **objects** the objects also the Content of Actual Parameters is **Copied** to Formal Parameters.
+When an object is passed to a method in Java, a copy of the reference is passed.
 
-But actually the reference of the object in Actual Parameters is copied to Formal Paramters.
+Both the original reference and the parameter refer to the same object, 
+so changes to the object are visible.
 
-So, changes made to the reference in another function are reflected in the main() as well.
+Reassigning the parameter does not affect the original reference.
 
 ```Java
-public class FunctionPower {
-
-    public static int change(int Arr[]) {
-        Arr[0] = 20;
-    }
-
-    public static void main(String[] args) {
-        int A[] = {2, 4, 6, 8, 10};
-        change(A);
-        System.out.println(A[0]);           => 20
-    }
-}
-``
+Student s1 = new Student();
+function(s1);
 ```
 
-New Array object is not created in the `change()`, but instead Reference to the Array object `A` is copied to Reference `Arr`.
+The **value of the reference** is copied.
 
-So, `Arr` will also point to the same Array object to which `A` is pointing.
+Not the object.
+
+```Java
+void function(Student s) {
+    s.rollNo = 42;
+}
+```
+
+This does change the object sent from `main()`.
+
+**Why?** We modified the object, Not the reference.
+
+Now watch this:
+
+```Java
+void function(Student s) {
+    s = new Student(); // reassign
+}
+```
+
+This does nothing to `main()`.
+
+**Why?** Only the copied reference `s` changed, the original reference stays untouched.
+
+> If this were true pass-by-reference, that reassignment would be visible. It isn’t.
 
 ## Variable Number of Arguments
 
@@ -73,7 +87,7 @@ static void show(int ...A) {
 }
 
 public static void main(String[] args) {
-    show(1,2,3,4,5);                    => 1 2 3 4 5
+    show(1,2,3,4,5);                    // 1 2 3 4 5
 }
 ```
 
@@ -113,13 +127,11 @@ public class CommandLineArgs {
 }
 ```
 
-Now, To pass the command line arguments:
+Now, to pass the command line arguments:
 
 ```shell
 > javac CommandLineArgs.java
-```
 
-```shell
 > java CommandLineArgs Harry Jack Thomas
 Harry
 Jack

@@ -1,6 +1,6 @@
 # Object Oriented Programming
 
-Consider this file name `MyRectangle.java` :
+File name `MyRectangle.java` :
 
 ```Java
 class Rectangle {
@@ -25,7 +25,7 @@ class Rectangle {
 public class MyRectangle {
     public static void main(String[] args) {
         Rectangle r1 = new Rectangle(5,10);
-        System.out.println(r1.area());          => 50
+        System.out.println(r1.area());          // 50
     }
 }
 ```
@@ -40,26 +40,30 @@ class Test {
 class Main {
     public static void main(String[] args) {
         Test obj = new Test();
-        System.out.println(obj);                        => Test@512ddf17
+        System.out.println(obj);        // Test@512ddf17
     }
 }
 ```
 
-This is because while printing the object, the toString() method of the object class is called. It formats the object in the default format.
+This is because while printing the object, 
+the `toString()` method of the object class is called. 
 
-If we want to format the output in our own way, we need to override the toString() method inside the class.
+It formats the object in the default format.
+
+If we want to format the output in our own way, 
+we need to override the `toString()` method inside the class.
 
 ```Java
 class Test {
     public String toString() {
-        return "object";
+        return "Test Object";
     }
 }
 
 class Main {
     public static void main(String[] args) {
         Test obj = new Test();
-        System.out.println(obj);                        => object
+        System.out.println(obj);        // Test Object
     }
 }
 ```
@@ -83,10 +87,11 @@ class Subject {
 
 public class ArrayOfObjects {
     public static void main(String[] args) {
-        // This only creates 3 references for the objects, It doesn't create the objects
+        // This only creates an array that stores references of objects
+        // It doesn't create the objects of Subject
         Subject subs[] = new Subject[3];
 
-        // We need to create objects explicitly, from the heap.
+        // We need to create objects explicitly, from the heap
         subs[0] = new Subject("Cpp", 100);
         subs[1] = new Subject("Java", 100);
         subs[2] = new Subject(".NET", 50);
@@ -121,7 +126,7 @@ class Student {
     private String Department;
     private Subject subjects[];
 
-    public Student(int rollNo, String name, String Department, String... subs) {
+    public Student(int rollNo, String name, String Department, String ...subs) {
         this.rollNo = rollNo;
         this.name = name;
         this.Department = Department;
@@ -133,15 +138,16 @@ class Student {
     }
 
     public String toString() {
-
-        // adding the Subject object to the string
+        // adding the Subject objects to string
         StringBuilder sb = new StringBuilder("");
         for (Subject s : subjects) {
             sb.append(s.toString());
         }
 
-        // returning the Student object, along with the value of Array of Subject objects
-        return "\nRoll no: " + rollNo + "\nName: " + name + "\nDepartment: " + Department + "\nSubjects: " + sb;
+        // returning the Student object
+        // Along with the value of array of Subject objects
+        return "\nRoll no: " + rollNo + "\nName: " + name 
+                + "\nDepartment: " + Department + "\nSubjects: " + sb;
     }
 }
 

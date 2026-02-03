@@ -1,40 +1,42 @@
 # Multithreading
 
-Running multiple programs on a single machine or a computer is known as **multi-programming**.
+Running multiple programs on a single computer is known as **multiprogramming**.
 
 Forms of Multiprogramming:
 
-1. Multi User : Multiple users are using the same computer for running different programs.
+1. **Multi User:** Multiple users are using the same computer for running different programs.
 
-2. Multi Tasking : Single user, but runs multiple tasks simultaneously in one computer.
+2. **Multi Tasking:** Single user, but runs multiple tasks simultaneously in one computer.
 
 Multithreading is part of Multi-tasking.
 
-Java provides `Thread` class and `runnable` interface to achieve multithreading.
+Java provides `Thread` class and `Runnable` interface to achieve multithreading.
 
 `Thread` class contains the actual mechanism for multithreading.
 
 ## Thread Class
 
+Extending the `Thread` class:
+
 ```Java
-class MyThread extends Thread{
+class MyThread extends Thread {
     @Override
-    public void run(){
+    public void run() {
         int i = 0;
-        while (true){
+        while (true) {
             i++;
             System.out.println(i + ". Hello");
         }
     }
 }
 
-public class Main{
-    public static void main(String[] args){
-        Thread thd = new Thread();
+public class Main {
+    public static void main(String[] args) {
+        MyThread thd = new MyThread();
         thd.start();
 
         int i = 0;
-        while (true){
+        while (true) {
             i++;
             System.out.println(i + ". World");
         }
@@ -42,55 +44,56 @@ public class Main{
 }
 ```
 
+Making `Main` class extend the `Thread` class:
+
 ```Java
-public class Main extends Thread{
+public class Main extends Thread {
     @Override
-    public void run(){
+    public void run() {
         int i = 0;
-        while (true){
+        while (true) {
             i++;
             System.out.println(i + ". Hello");
         }
     }
 
-    public static void main(String[] args){
-        Main dr = new Main();
-        dr.start();
+    public static void main(String[] args) {
+        Main m = new Main();
+        m.start();
 
         int i = 0;
-        while (true){
+        while (true) {
             i++;
             System.out.println(i + ". World");
         }
     }
 }
 ```
-
----
 
 ## Runnable Interface
 
+Implementing the `Runnable` interface:
+
 ```Java
-class MyRunnable implements Runnable{
+class MyRunnable implements Runnable {
     @Override
-    public void run(){
+    public void run() {
         int i = 0;
-        while (true)
-        {
+        while (true) {
             i++;
             System.out.println(i + ". Hello");
         }
     }
 }
 
-public class Main{
-    public static void main(String[] args){
-        MyRunnable rnb = new MyRunnable();
-        Thread thd = new Thread(rnb);
-        thd.start();
+public class Main {
+    public static void main(String[] args) {
+        MyRunnable r = new MyRunnable();
+        Thread t = new Thread(r);
+        t.start();
 
         int i = 0;
-        while (true){
+        while (true) {
             i++;
             System.out.println(i + ". World");
         }
@@ -98,24 +101,26 @@ public class Main{
 }
 ```
 
+Making `Main` class implement the `Runnable` interface:
+
 ```Java
-public class Main implements Runnable{
+public class Main implements Runnable {
     @Override
-    public void run(){
+    public void run() {
         int i = 0;
-        while (true){
+        while (true) {
             i++;
             System.out.println(i + ". Hello");
         }
     }
 
-    public static void main(String[] args){
-        Main dr = new Main();
-        Thread thd = new Thread(dr);
-        thd.start();
+    public static void main(String[] args) {
+        Main m = new Main();
+        Thread t = new Thread(m);
+        t.start();
 
         int i = 0;
-        while (true){
+        while (true) {
             i++;
             System.out.println(i + ". World");
         }
@@ -125,31 +130,34 @@ public class Main implements Runnable{
 
 ## States of Thread
 
-new -> ready -> running -> terminated
+    new -> ready -> running -> terminated
 
-During Running state, it can go into one of the following states:
+The First state of the thread is **new**, it stores the object of the thread.
 
-1. wait : Waiting to acquire some resource or Made to wait by some other thread.
+When `start()` method is called then thread enters into the **ready** state, 
+where it is ready to run.
 
-2. timed wait : To make the thread to delay for some time using the sleep method, it is also known as sleep state.
+During **Running** state, it can go into one of the following states:
 
-3. blocked : It is similar to waiting state.
+1. **wait**: Waiting to acquire some resource or Made to wait by some other thread.
 
-The First state of the thread is `new`, it stores the object of the thread.
+2. **timed wait**: Make the thread to delay for some time using the sleep method, 
+                   it is also known as **sleep state**.
 
-When `start()` method is called then thread enters into the ready state, where it is ready to run.
+3. **blocked**: It is similar to waiting state.
 
 ## Thread Priorities
 
-JAVA supports thread priorities from 1-10.
+JAVA supports thread priorities from `1`-`10`.
 
-The priority of default thread is always 5.
+The priority of default thread is always `5`.
 
-The higher priority is given to the thread which gets the input or the data.
+The thread with **higher priority** gets the **more CPU time**.
 
-The thread with higher priority gets the more CPU time.
+Higher priority is given to threads which **gets the input or the data**.
 
-Multithreading features are provided by the operating systems but in java, JVM have its own scheduler.
+Multithreading features are provided by the operating systems...
+but in java, **JVM have its own scheduler**.
 
 ## Methods of Thread Class
 
@@ -180,18 +188,20 @@ boolean isInterrupted();
 
 // Instance methods
 void interrupt();   // It will stop doing the currently doing work, e.g. stop waiting/sleeping
-void join();    // If a thread has finished its job, then instead of terminating, it can wait for other threads to finish
-                // e.g. main() can wait until all the threads have finished
+void join();        // If a thread has finished its job, then instead of terminating, it can wait for other threads to finish
+                    // e.g. main() can wait until all the threads have finished
 void join(long millseconds);
 void run();
 void start();
 
 // Static Methods
 int activeCount();
-Thread currentThread();     // returns reference to current running thread
-void yield();               // It can stop higher priority thread from starvating lower priority threads (Continue after the lower priority thread is finished)
-void dumpstack();           // to know the contents in the stack or to know the depth of the stack.
+Thread currentThread(); // returns reference to current running thread
+void yield();           // It can stop higher priority thread from starvating lower priority threads (And continue after the lower priority thread is finished)
+void dumpstack();       // To know the contents in the stack or to know the depth of the stack.
 ```
+
+## Example
 
 ```Java
 class MyThread extends Thread {
@@ -200,8 +210,7 @@ class MyThread extends Thread {
         super(name);
 
         // Priority can be set in the main() also, using the Thread object
-        setPriority(MIN_PRIORITY);
-
+        setPriority(Thread.MIN_PRIORITY);
     }
 
     public void run() {
@@ -223,7 +232,6 @@ public class Main {
         MyThread t = new MyThread("Thread 1");
         System.out.println("Thread Id: " + t.getId());
         System.out.println("Thread name: " + t.getName());
-        // t.setPriority(MIN_PRIORITY);
         System.out.println("Thread Priority: " + t.getPriority());
         System.out.println("Thread State: " + t.getState());
         t.start();
@@ -307,28 +315,33 @@ public class Main {
 }
 ```
 
-The classes Mythread1 and Mythread2 access the data from the display class which is the shared object.
+The classes `MyThread1` and `MyThread2` access the data from the display class 
+which is the shared object.
 
----
-
-Example using ATM Machine:
+### Example using ATM Machine
 
 ```Java
-public class ATM {
+class ATM {
     synchronized public void checkBalance(String name) {
         System.out.print(name);
-        try {Thread.sleep(1000);} catch (Exception e) {}
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
         System.out.println(" is checking balance");
     }
 
     synchronized public void withdraw(String name, int amount) {
         System.out.print(name);
-        try {Thread.sleep(1000);} catch (Exception e) {}
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
         System.out.println(" is withdrawing " + amount);
     }
 }
 
-public class Customer extends Thread {
+class Customer extends Thread {
     private String name;
     private int amount;
     private ATM atm;
@@ -360,41 +373,66 @@ public class Main {
         c2.start();
     }
 }
-
 ```
 
 ATM Object is a shared resource, so we need to synchronize it.
 
-## Inter Process Communication
+## Inter Thread Communication
 
-It is a communication between the synchronized threads.
+**Inter-Process Communication (IPC)** → between processes
 
-It is the communication between a single producer thread and a consumer thread.
+**Inter-Thread Communication** → between threads inside the same process
 
-The inter thread communication refers to the synchronization between the producer thread and the consumer thread to access the write and read method simultaneously.
+Inter-thread communication is a way for threads to coordinate their work 
+so they don’t step on each other’s toes.
 
-To achieve the communication the flag = true and flag = false are used.
+Typical scenario:
+- One thread produces data (producer)
+- Another thread consumes data (consumer)
+- They share the same object
+
+The problem:
+- Consumer should wait if there’s nothing to consume
+- Producer should wait if the buffer is full
+
+Threads communicate using the methods:
+- `wait()`
+- `notify()`
+- `notifyAll()`
+
+These methods must be called inside synchronized blocks or methods.
+
+When a thread cannot proceed because a required condition is not met, 
+it calls `wait()` and releases the lock. 
+
+When another thread changes the condition, 
+it calls `notify()` or `notifyAll()` to wake waiting threads.
 
 ### Race Condition
 
-When there is a single producer thread and multiple consumer threads.
+A race condition happens when:
 
-All consumers do not execute at once, they do in a round robin fashion.
+- Multiple threads access shared data
+- The result depends on who runs first
+- The outcome becomes unpredictable
 
-- When the count is zero then it is the producers turn.
+To avoid race conditions:
 
-- When the count is not zero then it is the consumers turn.
+- Shared data must be accessed in synchronized code
+- Conditions must be checked using a `while` loop
+- `notifyAll()` is preferred when multiple threads are waiting
 
-Since there are more than one consumers, any one of the consumer can access it.
+### notify vs notifyAll
 
-The `notify()` method can open any thread as they may not be in an order.
+`notify()`
 
-    Assume one thread is accessing the shared resource and all other threads are blocked,
-    when that thread has finished working it will inform other threads
-    and any of the threads may access the object just like in a race.
+- Wakes one arbitrary waiting thread
+- Risky when multiple consumers exist
 
-So, in the above the count method is used to control the race.
+`notifyAll()`
 
-The race condition can be avoided by the inter-thread condition.
+- Wakes all waiting threads
+- Each re-checks the condition
+- Safer for complex cases
 
-> Notify() : This methods informs the blocked threads that they can now access the shared resource
+That’s why conditions must always be checked in a `while` loop, not `if`.

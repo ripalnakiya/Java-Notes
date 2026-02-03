@@ -4,31 +4,33 @@
 
 <instance-profile id="jn"
                  name="Java Notes"
-                 start-page="01_Fundamentals.md">
+                 start-page="01-fundamentals.md">
 
-    <toc-element topic="01_Fundamentals.md"/>
+    <toc-element topic="01-fundamentals.md"/>
+    <toc-element topic="02-basics.md"/>
+    <toc-element topic="03-arrays.md"/>
+    <toc-element topic="04-strings.md"/>
+    <toc-element topic="05-functions.md"/>
 
-    <toc-element toc-title="Basics">
-        <toc-element topic="02_Basics.md"/>
-        <toc-element topic="03_Strings.md"/>
-        <toc-element topic="04_Arrays.md"/>
-        <toc-element topic="05_Functions.md"/>
+    <toc-element topic="01-object-oriented-programming.md">
+        <toc-element topic="02-access-modifiers.md"/>
+        <toc-element topic="03-inheritance.md"/>
+        <toc-element topic="04-abstract-class.md"/>
+        <toc-element topic="05-interfaces.md"/>
+        <toc-element topic="06-static.md"/>
+        <toc-element topic="07-final.md"/>
+        <toc-element topic="08-nested-class.md"/>
     </toc-element>
 
-    <toc-element toc-title="OOPC">
-        <toc-element topic="01_Object_Oriented_Programming.md"/>
-        <toc-element topic="02_Inheritance.md"/>
-        <toc-element topic="03_Abstract_Class.md"/>
-        <toc-element topic="04_Interfaces.md"/>
-        <toc-element topic="05_Static_and_Final.md"/>
-        <toc-element topic="06_Access_Modifiers.md"/>
-        <toc-element topic="07_Exception_Handling.md"/>
+    <toc-element topic="07-exception-handling.md"/>
+    <toc-element topic="08-multithreading.md"/>
+    <toc-element topic="09-annotations.md"/>
+    <toc-element topic="10-lambda-expressions.md"/>
+
+    <toc-element toc-title="Design Patterns">
+        <toc-element topic="01-singleton.md"/>
     </toc-element>
 
-    <toc-element  toc-title="Other">
-        <toc-element topic="01_Multithreading.md"/>
-        <toc-element topic="02_Annotations.md"/>
-        <toc-element topic="03_Lamda_Expressions.md"/>
-    </toc-element>
+    <toc-element topic="12-cpp-vs-java.md"/>
 
 </instance-profile>

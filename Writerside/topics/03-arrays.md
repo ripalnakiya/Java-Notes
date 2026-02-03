@@ -30,7 +30,7 @@ String fruits[] = {"Banana", "Mango", "Apple"};
 ## Array Length
 
 ```Java
-System.out.println(marks.length);           => 50
+System.out.println(marks.length);
 ```
 
 ## For each loop
@@ -87,7 +87,7 @@ A = new int[10];
 B = new int[3][4];
 ```
 
-Here, A is 1D array and B is 2D array.
+Here, `A` is 1D array and `B` is 2D array.
 
 ### Accessing Array Elements
 
