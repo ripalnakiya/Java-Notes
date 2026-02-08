@@ -387,13 +387,13 @@ so they don’t step on each other’s toes.
   - Another thread consumes data (consumer)
   - They share the same object
 
-<br>
+<br></br>
 
 - The problem:
   - Consumer should wait if there’s nothing to consume
   - Producer should wait if the buffer is full
 
-<br>
+<br></br>
 
 - Threads communicate using the methods:
   - `wait()`
