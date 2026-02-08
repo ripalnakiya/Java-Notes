@@ -1,4 +1,5 @@
 # Arrays
+<show-structure depth="2"/>
 
 Array Declaration Syntax:
 

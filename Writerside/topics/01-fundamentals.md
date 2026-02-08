@@ -1,4 +1,5 @@
 # Fundamentals
+<show-structure depth="2"/>
 
 ## Hybrid Language
 

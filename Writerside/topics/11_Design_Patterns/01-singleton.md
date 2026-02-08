@@ -1,4 +1,5 @@
 # Singleton
+<show-structure depth="2"/>
 
 A class which can create only one object is called **singleton class**.
 
@@ -10,6 +11,7 @@ In singleton class, `getInstance()` method is used.
 > Here, we never make a **static object**.
 > 
 > We make a **static reference** that points to an object on the heap.
+{style="warning"}
 
 ```Java
 class Singleton {

@@ -1,14 +1,12 @@
 # Exception Handling
+<show-structure depth="2"/>
 
 Exceptions are Runtime Errors.
 
-There are many types of errors:
-
-1. **Syntax Error** - can be removed with the help of compiler.
-
-2. **Logical Error** - can be removed with the help of debugger.
-
-3. **Runtime Error** - can be resolved with the help of Exception Handling.
+- There are many types of errors:
+  1. **Syntax Error** - can be removed with the help of compiler.
+  2. **Logical Error** - can be removed with the help of debugger.
+  3. **Runtime Error** - can be resolved with the help of Exception Handling.
 
 Causes of runtime errors are bad input or unavailability of resources.
 
@@ -64,13 +62,11 @@ void printStackTrace();       // System.out.println(e.printStackTrace());
 // This prints the stack trace of the exception (Sequence of Method calls).
 ```
 
-Exception classes are categorized into two types:
-
-1. **Checked exceptions** must be handled by `try` and `catch`, java compiler
-   forces you to write `try` and `catch`.
-
-2. **Unchecked exceptions** are not mandatory to be handled.
-   - Only Runtime Exceptions are the unchecked exceptions.
+- Exception classes are categorized into two types:
+  1. **Checked exceptions** must be handled by `try` and `catch`, java compiler
+     forces you to write `try` and `catch`.
+  2. **Unchecked exceptions** are not mandatory to be handled.
+     - Only Runtime Exceptions are the unchecked exceptions.
 
 ## Custom Exception Classes
 
@@ -198,6 +194,7 @@ So we pass it on to the calling function using `throws` keyword in the function 
 Usually `finally` block is used to release the resources.
 
 > It is useful when we're not handling all the exceptions in the program.
+{style="note"}
 
 ```Java
 

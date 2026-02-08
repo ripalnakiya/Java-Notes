@@ -1,4 +1,5 @@
 # Abstract Classes
+<show-structure depth="2"/>
 
 | Concrete Class               | Abstract Class                     |
 |------------------------------|------------------------------------|
@@ -61,9 +62,10 @@ it must override all the abstract methods.
 > Abstract classes are used for imposing standards and sharing methods,
 >
 > Subclasses are meant for following those standards.
+{style="note"}
 
 Abstract Class and abstract methods, can neither be `final` nor `static`.
 
-Abstract Classes are used for implementing **Inheritance** as well as **Polymorphism**.
-- **Inheritance:** using Concrete Methods
-- **Polymorphism:** using Abstract Methods
+- Abstract Classes are used for implementing **Inheritance** as well as **Polymorphism**.
+  - **Inheritance:** using Concrete Methods
+  - **Polymorphism:** using Abstract Methods

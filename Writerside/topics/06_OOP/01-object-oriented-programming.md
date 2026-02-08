@@ -1,4 +1,5 @@
 # Object Oriented Programming
+<show-structure depth="2"/>
 
 File name `MyRectangle.java` :
 

@@ -1,4 +1,5 @@
 # Inheritance
+<show-structure depth="2"/>
 
 ```Java
 class Circle {
@@ -62,10 +63,10 @@ class Derived extends Base {
 
 `super` is a reference to the parent class.
 
-It is used to:
-- Call parent constructor
-- Access parent fields
-- Call parent methods
+- It is used to:
+  - Call parent constructor
+  - Access parent fields
+  - Call parent methods
 
 Here, `super()` is used to call a superclass parameterized constructor.
 

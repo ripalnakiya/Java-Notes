@@ -1,4 +1,5 @@
 # Functions
+<show-structure depth="2"/>
 
 ```Java
 public class FunctionPower {
@@ -64,6 +65,7 @@ This does nothing to `main()`.
 **Why?** Only the copied reference `s` changed, the original reference stays untouched.
 
 > If this were true pass-by-reference, that reassignment would be visible. It isn’t.
+{style="note"}
 
 ## Variable Number of Arguments
 

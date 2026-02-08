@@ -1,4 +1,5 @@
 # Collection Framework
+<show-structure depth="2"/>
 
 ## Array List
 

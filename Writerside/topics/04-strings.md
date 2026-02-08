@@ -1,4 +1,5 @@
 # Strings
+<show-structure depth="2"/>
 
 String is collection of characters.
 
@@ -10,7 +11,8 @@ String str = "Hello";
 String str = new String("Hello");
 ```
 
-Strings are **Immutable**.
+> Strings are **Immutable**.
+{style="warning"}
 
 ## String Concatenation
 
@@ -84,13 +86,14 @@ str1.compareTo(str2);
 ```
 
 If value is 0, means strings are equal.
+
 If value is less than 0, means `str1` is less than `str2`
+
 If value is greater than 0, means `str1` is greater than `str2`
 
-For example,
-
-- `Java` is greater than `Cpp`, because (74 > 67) i.e. (J > C)
-- `ABC` is smaller than `abc`, because (65 < 97) i.e. (A < a)
+- For example,
+  - `Java` is greater than `Cpp`, because (74 > 67) i.e. (J > C)
+  - `ABC` is smaller than `abc`, because (65 < 97) i.e. (A < a)
 
 ## String Builder
 

@@ -1,4 +1,5 @@
 # Final
+<show-structure depth="2"/>
 
     Final Variable, Final Method, Final Class
 
@@ -7,12 +8,12 @@ that is once the value is assigned then it can’t be modified.
 
 `final` variables are written in capital letters.
 
-`final` variable can be initialised:
-- During the declaration of the variable
-- Inside instance block (just a block of curly brackets)
-- Inside a static block (`main` method is also `static`), if the variable is also declared `static`
-- Inside the constructor of class
-    - As constructors can be overloaded, so the final variable must be initialized in every constructor.
+- `final` variable can be initialised:
+  - During the declaration of the variable
+  - Inside instance block (just a block of curly brackets)
+  - Inside a static block (`main` method is also `static`), if the variable is also declared `static`
+  - Inside the constructor of class
+      - As constructors can be overloaded, so the final variable must be initialized in every constructor.
 
 ```Java
 class Test {

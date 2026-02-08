@@ -1,12 +1,11 @@
 # Multithreading
+<show-structure depth="2"/>
 
 Running multiple programs on a single computer is known as **multiprogramming**.
 
-Forms of Multiprogramming:
-
-1. **Multi User:** Multiple users are using the same computer for running different programs.
-
-2. **Multi Tasking:** Single user, but runs multiple tasks simultaneously in one computer.
+- Forms of Multiprogramming:
+  1. **Multi User:** Multiple users are using the same computer for running different programs.
+  2. **Multi Tasking:** Single user, but runs multiple tasks simultaneously in one computer.
 
 Multithreading is part of Multi-tasking.
 
@@ -137,14 +136,11 @@ The First state of the thread is **new**, it stores the object of the thread.
 When `start()` method is called then thread enters into the **ready** state, 
 where it is ready to run.
 
-During **Running** state, it can go into one of the following states:
-
-1. **wait**: Waiting to acquire some resource or Made to wait by some other thread.
-
-2. **timed wait**: Make the thread to delay for some time using the sleep method, 
-                   it is also known as **sleep state**.
-
-3. **blocked**: It is similar to waiting state.
+- During **Running** state, it can go into one of the following states:
+  1. **wait**: Waiting to acquire some resource or Made to wait by some other thread.
+  2. **timed wait**: Make the thread to delay for some time using the sleep method, 
+                     it is also known as **sleep state**.
+  3. **blocked**: It is similar to waiting state.
 
 ## Thread Priorities
 
@@ -386,19 +382,23 @@ ATM Object is a shared resource, so we need to synchronize it.
 Inter-thread communication is a way for threads to coordinate their work 
 so they don’t step on each other’s toes.
 
-Typical scenario:
-- One thread produces data (producer)
-- Another thread consumes data (consumer)
-- They share the same object
+- Typical scenario:
+  - One thread produces data (producer)
+  - Another thread consumes data (consumer)
+  - They share the same object
 
-The problem:
-- Consumer should wait if there’s nothing to consume
-- Producer should wait if the buffer is full
+<br>
 
-Threads communicate using the methods:
-- `wait()`
-- `notify()`
-- `notifyAll()`
+- The problem:
+  - Consumer should wait if there’s nothing to consume
+  - Producer should wait if the buffer is full
+
+<br>
+
+- Threads communicate using the methods:
+  - `wait()`
+  - `notify()`
+  - `notifyAll()`
 
 These methods must be called inside synchronized blocks or methods.
 
@@ -410,29 +410,25 @@ it calls `notify()` or `notifyAll()` to wake waiting threads.
 
 ### Race Condition
 
-A race condition happens when:
+- A race condition happens when:
+  - Multiple threads access shared data
+  - The result depends on who runs first
+  - The outcome becomes unpredictable
 
-- Multiple threads access shared data
-- The result depends on who runs first
-- The outcome becomes unpredictable
-
-To avoid race conditions:
-
-- Shared data must be accessed in synchronized code
-- Conditions must be checked using a `while` loop
-- `notifyAll()` is preferred when multiple threads are waiting
+- To avoid race conditions:
+  - Shared data must be accessed in synchronized code
+  - Conditions must be checked using a `while` loop
+  - `notifyAll()` is preferred when multiple threads are waiting
 
 ### notify vs notifyAll
 
-`notify()`
+- `notify()`
+  - Wakes one arbitrary waiting thread
+  - Risky when multiple consumers exist
 
-- Wakes one arbitrary waiting thread
-- Risky when multiple consumers exist
-
-`notifyAll()`
-
-- Wakes all waiting threads
-- Each re-checks the condition
-- Safer for complex cases
+- `notifyAll()`
+  - Wakes all waiting threads
+  - Each re-checks the condition
+  - Safer for complex cases
 
 That’s why conditions must always be checked in a `while` loop, not `if`.

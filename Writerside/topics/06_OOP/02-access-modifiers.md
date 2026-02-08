@@ -1,4 +1,5 @@
 # Access Modifiers
+<show-structure depth="2"/>
 
 ## `private`
 - Only accessible inside that class

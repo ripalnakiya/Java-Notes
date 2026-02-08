@@ -1,4 +1,5 @@
 # Interfaces
+<show-structure depth="2"/>
 
 Interfaces are used for implementing **Polymorphism**.
 
@@ -241,6 +242,7 @@ interface Vehicle {
 
 > So, a `private` method is a utility/helper function 
 > for default or static methods inside the interface.
+{style="warning"}
 
 ### Rule 6
 

@@ -1,4 +1,5 @@
 # Static
+<show-structure depth="2"/>
 
     Static Variables, Static Methods, Static Blocks, Static Inner Classes
 
@@ -12,6 +13,7 @@ Static members can be accessed just by using class name.
 **Static methods** can access only static data members.
 
 > The static members of a class are created in the method area.
+{style="warning"}
 
 ## Static Blocks
 

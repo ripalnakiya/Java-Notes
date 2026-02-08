@@ -1,4 +1,5 @@
 # C++ vs Java
+<show-structure depth="2"/>
 
 ## 1. Multiple Inheritance
 
@@ -25,22 +26,16 @@ class C extends A implements B, D {}
 
 ## 2. Nested Classes
 
-**C++**
+- **C++** has nested classes, but:
+  - They do not have an implicit reference to the outer class.
+  - They behave like normal classes scoped inside another class.
+  - No concept of “inner class tied to an object”.
 
-C++ has nested classes, but:
-
-- They do not have an implicit reference to the outer class.
-- They behave like normal classes scoped inside another class.
-- No concept of “inner class tied to an object”.
-
-**Java**
-
-Java goes all-in on nesting:
-
-- Static nested classes
-- Non-static inner classes (have access to outer object)
-- Local classes (inside methods)
-- Anonymous classes
+- **Java** goes all-in on nesting:
+  - Static nested classes
+  - Non-static inner classes (have access to outer object)
+  - Local classes (inside methods)
+  - Anonymous classes
 
 ```Java
 class Outer {
@@ -58,90 +53,76 @@ C++ nested classes are mostly about namespacing, not object relationships.
 
 ## 3. Memory Management
 
-**C++**
+- **C++**
+  - Manual memory management.
+  - `new`, `delete`, smart pointers, RAII.
+  - You control lifetime.
 
-- Manual memory management.
-- `new`, `delete`, smart pointers, RAII.
-- You control lifetime.
-
-**Java**
-
-- Automatic Garbage Collection.
-- No delete.
-- Objects die when JVM decides they’ve suffered enough.
+- **Java**
+  - Automatic Garbage Collection.
+  - No delete.
+  - Objects die when JVM decides they’ve suffered enough.
 
 ## 4. Pointers vs References
 
-**C++**
+- **C++**
+  - Full-blown pointers.
+  - Pointer arithmetic.
+  - Null and dangling pointers.
 
-- Full-blown pointers.
-- Pointer arithmetic.
-- Null and dangling pointers.
-
-**Java**
-
-- No pointers (publicly).
-- Only references.
-- No pointer arithmetic.
+- **Java**
+  - No pointers (publicly).
+  - Only references.
+  - No pointer arithmetic.
 
 ## 5. Platform Dependency
 
-**C++**
+- **C++**
+  - Compiled to machine code.
+  - Platform-dependent binaries.
+  - Fast. Very fast.
 
-- Compiled to machine code.
-- Platform-dependent binaries.
-- Fast. Very fast.
-
-**Java**
-
-- Compiled to bytecode, runs on JVM.
-- “Write once, run anywhere” (after installing the JVM everywhere).
+- **Java**
+  - Compiled to bytecode, runs on JVM.
+  - “Write once, run anywhere” (after installing the JVM everywhere).
 
 ## 6. Performance
 
-**C++**
+- **C++**
+  - Generally faster.
+  - No GC pauses.
+  - Predictable latency.
+  - Preferred for systems, games, engines.
 
-- Generally faster.
-- No GC pauses.
-- Predictable latency.
-- Preferred for systems, games, engines.
-
-**Java**
-
-- Slightly slower in raw terms.
-- JIT compiler and JVM optimizations narrow the gap.
-- GC can introduce pauses.
+- **Java**
+  - Slightly slower in raw terms.
+  - JIT compiler and JVM optimizations narrow the gap.
+  - GC can introduce pauses.
 
 ## 7. Operator Overloading
 
-**C++**
+- **C++**
+  - Supported.
+  - You can overload almost anything.
 
-- Supported.
-- You can overload almost anything.
-
-**Java**
-
-- Not supported (except + for strings).
-- Intentional decision to keep code readable.
+- **Java**
+  - Not supported (except + for strings).
+  - Intentional decision to keep code readable.
 
 ## 8. Templates vs Generics
 
-**C++**
+- **C++**
+  - Templates: compile-time, very powerful.
 
-- Templates: compile-time, very powerful.
-
-**Java**
-
-- Generics: type erasure at runtime.
-- Less powerful, more predictable.
+- **Java**
+  - Generics: type erasure at runtime.
+  - Less powerful, more predictable.
 
 ## 9. Exceptions
 
-**C++**
+- **C++**
+  - No checked exceptions.
 
-- No checked exceptions.
-
-**Java**
-
-- Checked exceptions exist.
-- Compiler forces you to deal with them.
+- **Java**
+  - Checked exceptions exist.
+  - Compiler forces you to deal with them.

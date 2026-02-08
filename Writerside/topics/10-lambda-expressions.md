@@ -1,4 +1,5 @@
 # Lambda Expressions
+<show-structure depth="2"/>
 
 Lambda expressions are used for defining 
 anonymous expressions or nameless methods or functions.

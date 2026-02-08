@@ -1,4 +1,5 @@
 # Nested Class
+<show-structure depth="2"/>
 
 A class can have three type of **members**: variables, methods and inner classes.
 
@@ -21,6 +22,7 @@ All access modifiers can be used on the **members** of the class.
 But, **Outer (top-level) class →** `public` or `default` only
 
 > **Nested / inner classes →** can be `private`, `protected`, `public`, or `default`
+{style="note"}
 
 ## Static Nested Class
 

@@ -1,4 +1,5 @@
 # Annotations
+<show-structure depth="2"/>
 
 Annotations provide metadata about program elements 
 such as classes, interfaces, methods, fields, parameters, and constructors.

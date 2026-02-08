@@ -1,4 +1,5 @@
 # Basics
+<show-structure depth="2"/>
 
 ## Data Types
 
@@ -20,12 +21,11 @@ float fl = 10.5f;       // 4 bytes
 double dl = 12.5;       // 8 bytes
 ```
 
-Non-Primitive Types:
-
-- String
-- Array
-- Class
-- Interface
+- Non-Primitive Types:
+  - String
+  - Array
+  - Class
+  - Interface
 
 ## Identifier Rules
 
@@ -40,12 +40,11 @@ To improve the readability of program, we can use underscores in the literals.
 
 ```Java
 int num = 12_50_287;
-System.out.println(num);                    => 1230287
+System.out.println(num);                    // 1230287
 ```
 
 ## Operators
 
-There are different types of operators :
 - Arithmetic operators
 - Relational operators
 - Logical operators
@@ -90,9 +89,9 @@ Type Conversion
 
 Widening conversion takes place when two data types are automatically converted. 
 
-This happens when:
-- The two data types are compatible.
-- When we assign a value of a smaller data type to a bigger data type.
+- This happens when:
+  - The two data types are compatible.
+  - When we assign a value of a smaller data type to a bigger data type.
 
 **For Example,** in java, 
 the numeric data types are **compatible with each other** 
@@ -113,10 +112,10 @@ float price = 10.0f;
 int num = price;        // Invalid
 ```
 
-Where it happens:
-- Assignments
-- Expressions
-- Method arguments
+- Where it happens:
+  - Assignments
+  - Expressions
+  - Method arguments
 
 #### Type Promotion
 
@@ -124,9 +123,11 @@ While evaluating expressions,
 the intermediate value may exceed the range of operands 
 and hence the expression value will be promoted. 
 
-Some conditions for type promotion are:
-1. Java automatically promotes each `byte`, `short`, or `char` operand to `int` when evaluating an expression.
-2. If one operand is `long`, `float` or `double` the whole expression is promoted to `long`, `float`, or `double` respectively.
+- Some conditions for type promotion are:
+  1. Java automatically promotes each `byte`, `short`, or `char` 
+     operand to `int` when evaluating an expression.
+  2. If one operand is `long`, `float` or `double` 
+     the whole expression is promoted to `long`, `float`, or `double` respectively.
 
 **Important detail:**
 
